@@ -6,7 +6,7 @@ This is **very naive** implementation of [Learning to Learn without Gradient Des
 These tasks are 50 X 50 and minmax normalized([-1,1])
 
 Each instance(task) looks like
-![gptask](./gptask.PNG)
+![gptask](./images/gptask.PNG)
 
 4900 episodes for training / 100 episodes for test
 
@@ -28,4 +28,4 @@ Each instance(task) looks like
 # Training
 	python main_a3c_gp_meta.py
 
-![r_test](./r_test.PNG)
+![r_test](./images/r_test.PNG)
