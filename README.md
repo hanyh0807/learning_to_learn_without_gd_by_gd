@@ -3,7 +3,7 @@ This is **very naive** implementation of [Learning to Learn without Gradient Des
 ### Tasks
 5000 tasks(scale0.1_wh50_5000.p, scalerand_wh50_5000.p) are instantiated from gaussian process(2dim.) with fixed scale(0.1) and random scale([0.01,0.61)).
 
-These tasks are 50 X 50 and minmax normalized([-1,1])
+These tasks are 50 X 50.
 
 Each instance(task) looks like
 ![gptask](./images/gptask.PNG)
