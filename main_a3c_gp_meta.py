@@ -506,9 +506,9 @@ class Worker():
                         if self.initial_reward < cr:
                             self.initial_reward = cr
 #                            saver.save(sess,self.model_path+'/model-'+str(episode_count)+'.cptk')
-                    if episode_count > total_episodes:
-                        self.env.stop_process()
-                        coord.request_stop()
+                    #if episode_count > total_episodes:
+                    #    self.env.stop_process()
+                    #    coord.request_stop()
 
                 losses = self.train(ep_history,sess,gamma,v1,episode_count)
                 if episode_count % 10 == 0:
@@ -568,7 +568,7 @@ if __name__ == '__main__':
     scale = 5
     action_width, action_center = env.get_link_scale(scale=scale)    
     
-    total_episodes = 1001 #Set total number of episodes to train agent.
+    total_episodes = 1e5#Set total number of episodes to train agent.
     savedir = 'log'
 
     if not os.path.exists(savedir):
@@ -630,7 +630,7 @@ if __name__ == '__main__':
         
         master_network = AC_Network(parameter_dict=parameter_dict, action_width=action_width, scope='global', trainer=None, global_step=global_step) # Generate global network
     #    num_workers = multiprocessing.cpu_count() # Set workers to number of available CPU threads
-        num_workers = 1 # Set workers to number of available CPU threads
+        num_workers = 64 # Set workers to number of available CPU threads
         workers = []
         work_lock = Lock()
         shared_a = Array('d',int(a_size))
