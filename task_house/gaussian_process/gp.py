@@ -5,7 +5,6 @@
 import os
 
 import numpy as np
-import pandas as pd
 from multiprocessing import Process, Queue, Array, Value, Event
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
