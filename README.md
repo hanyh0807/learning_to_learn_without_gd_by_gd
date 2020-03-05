@@ -16,8 +16,6 @@ Each instance(task) looks like
 	- has continuous output (beta distribution).
 	- gets output & reward of previous step as input.
 	
-
----
 - Each agent chooses one task from 4900 training tasks randomly at the start of episode
 - Similarly, each agent chooses one task from 100 test tasks randomly at test episode.
 
