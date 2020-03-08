@@ -1,4 +1,4 @@
-This is **very naive** implementation of [Learning to Learn without Gradient Descentby Gradient Descent](https://arxiv.org/abs/1611.03824) with **A3C**.
+This is **very naive** implementation of [Learning to Learn without Gradient Descent by Gradient Descent](https://arxiv.org/abs/1611.03824) with **A3C**.
 
 ### Tasks
 5000 tasks(scale0.1_wh50_5000.p, scalerand_wh50_5000.p) are instantiated from gaussian process(2dim.) with fixed scale(0.1) and random scale([0.01,0.61)).
