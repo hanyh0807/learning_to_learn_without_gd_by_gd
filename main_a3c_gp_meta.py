@@ -327,7 +327,7 @@ class Worker():
         #if self.use_curiosity:
         #    discounted_rewards +=  ep_history[:,-1].reshape([-1])
         #advantages = (discounted_rewards - discounted_rewards.mean()) / (discounted_rewards.std() + 1e-5)
-        advantages = discounted_rewards - bootstrap_value.reshape([-1])
+        advantages = discounted_rewards - ep_history[:,4].reshape([-1])
         advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-5)
 
         '''
